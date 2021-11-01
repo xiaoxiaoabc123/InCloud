@@ -13,7 +13,7 @@ jobs:
       - name: Setup golang
         uses: actions/setup-go@v2
         with:
-          go-version: 1.14
+          go-version: 1.17.2
 
       - name: Setup Dependencies
         run: sudo apt-get install libpcap-dev git python3-pip
@@ -44,7 +44,7 @@ jobs:
       - name: Running naabu to check top 1000 ports
         run: |
           mapcidr -l input/target.txt -silent > input/cidr.txt
-          naabu -iL input/cidr.txt  -rate 10000 -top-ports 1000 | tee output/active_ports.txt
+          naabu -l input/cidr.txt  -rate 10000 -top-ports 1000 | tee output/active_ports.txt
         shell: bash
 
 
@@ -86,8 +86,8 @@ jobs:
           git add output/dirout.csv
       - name: Commit results to Github
         run: |
-          git config --local user.email "admin@inbug.org"
-          git config --global user.name "inbug-team"
+          git config --local user.email "jeffyandi364@gmail.com"
+          git config --global user.name "RASSec"
           git commit -m "InCloud Report" -a --allow-empty
       - name: Push changes
         uses: ad-m/github-push-action@master
