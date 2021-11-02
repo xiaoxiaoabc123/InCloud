@@ -16,6 +16,7 @@ sources:
     - certspotter
     - censys
     - chaos
+    - chinaz
     - crtsh
     - dnsdumpster
     - hackertarget
@@ -30,6 +31,7 @@ sources:
     - threatcrowd
     - threatminer
     - virustotal
+    - fofa
 all-sources:
     - alienvault
     - anubis
@@ -63,6 +65,7 @@ all-sources:
     - virustotal
     - waybackarchive
     - zoomeye
+    - fofa
 recursive:
     - alienvault
     - binaryedge
@@ -80,6 +83,7 @@ binaryedge: []
 censys: []
 certspotter: []
 chaos: []
+chinaz: []
 dnsdb: []
 github: []
 intelx: []
@@ -93,4 +97,5 @@ threatbook: []
 urlscan: []
 virustotal: []
 zoomeye: []
-subfinder-version: 2.4.8
+fofa: []
+subfinder-version: v2.4.9
